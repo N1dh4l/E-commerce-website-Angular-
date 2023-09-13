@@ -28,11 +28,12 @@ export class CartService {
     
   }
 
-  getTotalPrice(){
+  getTotalPrice(): number{
     let grandTotal =0;
     this.itemCartList.map((a:any)=>{
         grandTotal += a.total;
     })
+    return grandTotal;
   }
 
   removeCartItem(product: any){

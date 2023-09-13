@@ -16,14 +16,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>2</th>
-                            <th>8</th>
-                            <th>8</th>
+                        <tr *ngFor="let p of products; let i = index">
+                            <th>{{i+1}}</th>
+                            <th>{{p.title}}</th>
+                            <th><img style="width: 120px;" src="{{p.image}}"></th>
+                            <th>{{p.description}}</th>
+                            <th>{{p.price}}</th>
+                            <th>{{p.quantity}}</th>
+                            <th>{{p.total}}</th>
                             <th>
                                 <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </th>               
